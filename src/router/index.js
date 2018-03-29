@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '@/components/home/index'
-import latestInfo from '@/components/latestInfo/latest-info'
-import latestInfoDetail from '@/components/latestInfo/latest-info-detail'
+import index from '@/components/home/index'//首页
+import latestInfo from '@/components/home/latest-info'//资讯
+import latestInfoDetail from '@/components/home/latest-info-detail'//资讯详情
 
 Vue.use(Router)
 
 export default new Router({
+	mode:'history',
   routes: [
     {//首页
       path: '/',
@@ -19,7 +20,7 @@ export default new Router({
       name: 'latestInfo',
       component: latestInfo,
 	   	children:[
-	      {
+	      {//资讯详情
 	      	path:'/latestInfoDetail',
 	      	name:'latestInfoDetail',
 	      	component:latestInfoDetail

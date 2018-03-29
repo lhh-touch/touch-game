@@ -9,6 +9,7 @@
   </div>
 </template>
 
+
 <script>
 import vHeader from './components/common/v-header';
 import vFooter from './components/common/v-footer';
