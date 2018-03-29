@@ -35,7 +35,7 @@
 					  		</ul>
 					  		<div class="language">
 					  				<p @click="changeLanguage" :class="{'active':languageIndex==true}">中文</p>
-					  				<ol v-show="languageIndex==true">
+					  				<ol v-show="languageIndex==true" class="">
 							  				<li>中文</li>
 							  				<li>英文</li>
 							  				<li>繁体</li>
