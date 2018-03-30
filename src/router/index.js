@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '@/components/home/index'//首页
+import joinUs from '@/components/home/join-us'//首页
 import latestInfo from '@/components/home/latest-info'//资讯
 import latestInfoDetail from '@/components/home/latest-info-detail'//资讯详情
 
@@ -9,10 +9,10 @@ Vue.use(Router)
 export default new Router({
 	mode:'history',
 	routes: [
-	    {//首页
-	      	path: '/',
-	      	name: 'index',
-	      	component: index
+	    {//加入我们
+	      	path: '/joinUs',
+	      	name: 'joinUs',
+	      	component: joinUs
 	    },
 	    {//最新资讯
 	      	path: '/latestInfo',

@@ -1,5 +1,5 @@
 <template>
-	  <article class="index">
+	  <article class="join-us">
 	    	<section class="banner">
 	    			<div class="container d-flex flex-column justify-content-center align-items-center">
 	    					<h1>GAREEAS</h1>
@@ -58,13 +58,12 @@
 	    					
 	    			</div>
 	    	</section>
-	    	
 	  </article>
 </template>
 
 <script>
 export default {
-  name: 'index',
+  name: 'join-us',
   data () {
     return {
     	activeIndex:0,
@@ -76,7 +75,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-.index{
+.join-us{
 	.banner{
 		height: 350px;
 		background: url(../../../static/img/bgc.png) no-repeat center center;

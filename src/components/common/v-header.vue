@@ -11,7 +11,7 @@
 						  				<router-link to="/latestInfo"><i class="fa fa-gamepad"></i>游戏</router-link>
 						  			</li>
 						  			<li @click="changeIndex($event)" :class="{'active':activeIndex==2}">
-						  				<router-link to="/latestInfoDetail"><i class="fa fa-flag"></i>加入我们</router-link>
+						  				<router-link to="/joinUs"><i class="fa fa-flag"></i>加入我们</router-link>
 						  			</li>
 						  			<li @click="changeIndex($event)" :class="{'active':activeIndex==3}">
 						  				<router-link to=""><i class="fa fa-user"></i>关于我们</router-link>
