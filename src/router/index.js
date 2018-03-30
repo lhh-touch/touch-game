@@ -8,24 +8,25 @@ Vue.use(Router)
 
 export default new Router({
 	mode:'history',
-  routes: [
-    {//首页
-      path: '/',
-      name: 'index',
-      component: index,
-      redirect:'/index'
-    },
-    {//最新资讯
-      path: '/latestInfo',
-      name: 'latestInfo',
-      component: latestInfo,
-	   	children:[
-	      {//资讯详情
+	routes: [
+	    {//首页
+	      	path: '/',
+	      	name: 'index',
+	      	component: index
+	    },
+	    {//最新资讯
+	      	path: '/latestInfo',
+	      	name: 'latestInfo',
+	      	component: latestInfo,
+	    },
+	    {//资讯详情
 	      	path:'/latestInfoDetail',
 	      	name:'latestInfoDetail',
 	      	component:latestInfoDetail
-	      }
-	    ] 
-    }
-  ]
+	  	},
+	  	{
+	  		path:'/',
+	  		redirect:'/index'
+	  	}
+	]
 })

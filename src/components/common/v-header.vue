@@ -11,7 +11,7 @@
 						  				<router-link to="/latestInfo"><i class="fa fa-gamepad"></i>游戏</router-link>
 						  			</li>
 						  			<li @click="changeIndex($event)" :class="{'active':activeIndex==2}">
-						  				<router-link to=""><i class="fa fa-flag"></i>加入我们</router-link>
+						  				<router-link to="/latestInfoDetail"><i class="fa fa-flag"></i>加入我们</router-link>
 						  			</li>
 						  			<li @click="changeIndex($event)" :class="{'active':activeIndex==3}">
 						  				<router-link to=""><i class="fa fa-user"></i>关于我们</router-link>
@@ -35,7 +35,7 @@
 					  		</ul>
 					  		<div class="language">
 					  				<p @click="changeLanguage" :class="{'active':languageIndex==true}">中文</p>
-					  				<ol v-show="languageIndex==true" class="">
+					  				<ol :class="{'active':languageIndex==true}">
 							  				<li>中文</li>
 							  				<li>英文</li>
 							  				<li>繁体</li>
@@ -62,6 +62,9 @@ export default {
   methods:{
 	  	changeIndex(ev){
 		  		if(ev.target.tagName=="LI"){
+		  			return;
+		  		}else if(ev.target.tagName=="I"){
+		  			this.activeIndex=$(ev.target).parent().parent().index();
 		  			return;
 		  		}
 	  			this.activeIndex=$(ev.target).parent().index();
@@ -144,6 +147,11 @@ export default {
 		ol{
 			text-align: center;
 			background: rgba(6,6,6,.6);
+			height: 0;
+			overflow: hidden;
+			&.active{
+				height: auto;
+			}
 			li{
 				padding: 5px 0;
 				cursor: pointer;
